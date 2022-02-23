@@ -1,6 +1,6 @@
 function Layout() {
     return (
-        <div>TEST</div>
+        <div></div>
     )
 }
 
