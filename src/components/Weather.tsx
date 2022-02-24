@@ -6,7 +6,7 @@ function Weather() {
 
     const [selectedCity, setSelectedCity] = useState('')
     const [cityWeather, setCityWeather] = useState({weather: "Sunny", temperature: "20 C", wind: 1, name: 'Gothenburg'})
-    const [infoTemp, setTemp] = useState(true)
+    const [infoTemp, setTemp] = useState(false)
     const [selectedTemp, setSelectedTemp] = useState('')
 
     
@@ -28,7 +28,7 @@ function Weather() {
             <input placeholder="City..." className="input-bordered input" required onChange={handleWeatherCity} value={selectedCity} type="text" />
             <button className="btn block mx-auto my-2" type="submit">Ändra stad</button>
             </form>
-            <div className="card w-96 bg-neutral shadow-xl mx-auto text-white mt-10">
+            <div className="card w-96 bg-neutral shadow-xl mx-auto text-white mt-2">
                 <figure className="px-10 pt-10">
                     <img srcSet="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoHCHevUPIqMJhbYiBc-46zeJQpoAxxsAy3A&usqp=CAU" alt="Shoes" className="rounded-xl" />
                 </figure>

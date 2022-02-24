@@ -20,7 +20,7 @@ function kelToCF(temp : number, infoTemp : boolean) {
         let Cel = Math.floor(temp - 273.15)
         return `${Cel} C`
     }else {
-        let Fahr = (1.8 * (temp - 273)) + 32
+        let Fahr = Math.round((1.8 * (temp - 273)) + 32)
         return `${Fahr} F`
     }
 }
