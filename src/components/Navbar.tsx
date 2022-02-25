@@ -1,11 +1,27 @@
 import { useState } from "react";
 
 function Navbar() {
+
+    const [location, setLocation] = useState("")
+
+    if(navigator) {
+        navigator.geolocation.getCurrentPosition(async pos => {
+            let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=72ce280222d220a20b10856b83fcdee3`)
+            let dataResponse = await data.json()
+            setLocation(dataResponse.name)
+        })
+    }
+
+
     return (
         <div className="mb-10 bg-neutral p-4">
             <div className="navbar">
                 <div className="navbar-start">
                     <h1 className="btn animate-pulse text-xl">Weather app</h1>
+                </div>
+                <div className="navbar-center">
+                    <button className="btn">Search Weather</button>
+                    <button className="btn">{location} Weather</button>
                 </div>
                 <div className="navbar-end text-white">
                     <h1 className="btn">Developed by MiMeiner, FrontFelix & PRimate</h1>
