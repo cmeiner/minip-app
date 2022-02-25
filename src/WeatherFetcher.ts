@@ -1,3 +1,5 @@
+import { loadImage } from "./loadImage"
+
 export async function WeatherFetcher(city : string, infoTemp : boolean) {
     
     let cityResponse = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=72ce280222d220a20b10856b83fcdee3`)
@@ -10,7 +12,7 @@ export async function WeatherFetcher(city : string, infoTemp : boolean) {
     let wind = Math.floor(data.wind.speed)
 
 
-    let newWeather = {weather: data.weather[0].main, temperature: kelToCF(data.main.temp, infoTemp), wind: wind, name: cityData[0].name}
+    let newWeather = {weather: data.weather[0].main, temperature: kelToCF(data.main.temp, infoTemp), wind: wind, name: cityData[0].name, url: await loadImage(data.weather[0].main)}
     return newWeather
 }
 
@@ -18,9 +20,9 @@ function kelToCF(temp : number, infoTemp : boolean) {
 
     if(infoTemp) {
         let Cel = Math.floor(temp - 273.15)
-        return `${Cel} C`
+        return `${Cel} °C`
     }else {
         let Fahr = Math.round((1.8 * (temp - 273)) + 32)
-        return `${Fahr} F`
+        return `${Fahr} °F`
     }
 }
