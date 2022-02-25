@@ -20,9 +20,9 @@ function Weather() {
 
     async function setWeather(e : any) {
         e.preventDefault()
-        let newWeather = await WeatherFetcher(selectedCity, infoTemp)
-        setCityWeather(newWeather)
-        console.log(await loadImage('test'))
+        let newWeather = await WeatherFetcher(infoTemp)
+        console.log(newWeather)
+        //setCityWeather(newWeather)
         
     }
     
