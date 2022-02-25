@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { loadImage } from "../loadImage";
 import { WeatherFetcher } from "../WeatherFetcher";
-
 function Weather() {
 
 
     const [selectedCity, setSelectedCity] = useState('')
-    const [cityWeather, setCityWeather] = useState({weather: "Sunny", temperature: "20 C", wind: 1, name: 'Gothenburg', url: "test.png"})
+    const [cityWeather, setCityWeather] = useState({weather: "Sunny", temperature: "20 C", wind: 1, name: 'Gothenburg', url: "./assets/sunny/sunny1.jpg"})
     const [infoTemp, setTemp] = useState(true)
     const [selectedTemp, setSelectedTemp] = useState('')
 
@@ -32,7 +31,7 @@ function Weather() {
             </form>
             <div className="card w-96 bg-neutral shadow-xl mx-auto text-white mt-2">
                 <figure className="px-10 pt-10">
-                    <img srcSet={cityWeather.url} alt="Shoes" className="rounded-xl" />
+                    <img srcSet={cityWeather.url} alt="Weather Image" className="rounded-xl card-image" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{cityWeather.name}</h2>
