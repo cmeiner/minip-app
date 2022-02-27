@@ -12,15 +12,21 @@ function SetWeather() {
     const [selectedTemp, setSelectedTemp] = useState('')
 
     
-    function handleWeatherCity(e : any) {
+    async function handleWeatherCity(e : any) {
         let inputCity = e.target.value
         setSelectedCity(inputCity)
+
+
     }
 
     async function UpdateWeather(e : any) {
         e.preventDefault()
-        let newWeather = await WeatherFetcher(infoTemp, selectedCity)
-        setCityWeather(newWeather)
+
+        if(selectedCity.length > 1) {
+            let newWeather = await WeatherFetcher(infoTemp, selectedCity)
+            setCityWeather(newWeather)
+
+        }
         
     }
     

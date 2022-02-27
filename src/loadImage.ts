@@ -6,7 +6,7 @@ export async function loadImage(weather : string) {
             return `./assets/cloudy/cloudy${random}.jpg`
         case "Clear":
             return `./assets/sunny/sunny${random}.jpg`
-        case "Rainy":
+        case "Rain":
             return `./assets/rainy/rainy${random}.jpg`
         case "Windy":
             return `./assets/windy/windy${random}.jpg`

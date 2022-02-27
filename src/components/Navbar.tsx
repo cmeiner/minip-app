@@ -3,12 +3,15 @@ import { useState } from "react";
 function Navbar() {
 
     const [location, setLocation] = useState("")
+    const [count, setCount] = useState(1)
 
-    if(navigator) {
+    if(navigator && count === 1) {
         navigator.geolocation.getCurrentPosition(async pos => {
-            let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=72ce280222d220a20b10856b83fcdee3`)
-            let dataResponse = await data.json()
-            setLocation(dataResponse.name)
+            setLocation('En gång')
+            // let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=72ce280222d220a20b10856b83fcdee3`)
+            // let dataResponse = await data.json()
+            // setLocation(dataResponse.name)
+            setCount(2)
         })
     }
 

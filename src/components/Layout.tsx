@@ -1,3 +1,4 @@
+import LocationWeather from "./LocationWeather";
 import Navbar from "./Navbar";
 import SearchWeather from "./SearchWeather";
 
