@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function Navbar() {
 
@@ -22,8 +23,8 @@ function Navbar() {
                     <h1 className="btn animate-pulse text-xl">Weather app</h1>
                 </div>
                 <div className="navbar-center">
-                    <button className="btn">Search Weather</button>
-                    <button className="btn">{location} Weather</button>
+                    <NavLink to="/search" className="btn">Search Weather</NavLink>
+                    <NavLink to="/" className="btn">{location} Weather</NavLink>
                 </div>
                 <div className="navbar-end text-white">
                     <h1 className="btn">Developed by MiMeiner, FrontFelix & PRimate</h1>
