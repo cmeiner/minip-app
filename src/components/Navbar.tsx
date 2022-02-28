@@ -7,10 +7,9 @@ function Navbar() {
 
     if(navigator && count === 1) {
         navigator.geolocation.getCurrentPosition(async pos => {
-            setLocation('En gång')
-            // let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=72ce280222d220a20b10856b83fcdee3`)
-            // let dataResponse = await data.json()
-            // setLocation(dataResponse.name)
+            let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${pos.coords.latitude}&lon=${pos.coords.longitude}&appid=72ce280222d220a20b10856b83fcdee3`)
+            let dataResponse = await data.json()
+            setLocation(dataResponse.name)
             setCount(2)
         })
     }

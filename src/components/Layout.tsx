@@ -7,6 +7,7 @@ function Layout() {
     <div>
       <Navbar />
       <SearchWeather />
+      <LocationWeather / >
     </div>
   );
 }

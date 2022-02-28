@@ -19,7 +19,7 @@ function GetGeoWeather() {
             let wind = Math.floor(data.wind.speed)
             let windDeg = data.wind.deg
             let newWeather : {weather : string, temperature : string, wind : number, name : string, url : string, deg : number}
-            newWeather = {weather: data.weather[0].main, temperature: kelToCF(data.main.temp, infoTemp), wind: wind, name: data.name, url: `./assets/sunny/sunny1.jpg`, deg: windDeg}
+            newWeather = {weather: data.weather[0].main, temperature: kelToCF(data.main.temp, infoTemp), wind: wind, name: data.name, url: await loadImage(data.weather[0].main), deg: windDeg}
             setCity(newWeather)
             setCount(2)
         })

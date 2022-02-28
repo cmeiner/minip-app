@@ -9,6 +9,7 @@ export function geoLocation(infoTemp : boolean) {
             let data = await response.json()
             let wind = Math.floor(data.wind.speed)
             let windDeg = data.wind.deg
+            let name = data.name
         
             let newWeather = {weather: data.weather[0].main, temperature: kelToCF(data.main.temp, infoTemp), wind: wind, name: name, url: await loadImage(data.weather[0].main), deg: windDeg}
             return newWeather
