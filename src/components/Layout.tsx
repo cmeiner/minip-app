@@ -1,3 +1,4 @@
+import LocationWeather from "./LocationWeather";
 import Navbar from "./Navbar";
 import SearchWeather from "./SearchWeather";
 
@@ -6,6 +7,7 @@ function Layout() {
     <div>
       <Navbar />
       <SearchWeather />
+      <LocationWeather / >
     </div>
   );
 }
