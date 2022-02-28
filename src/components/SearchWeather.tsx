@@ -31,10 +31,10 @@ function SetWeather() {
     }
     
     return (
-        <div>
-            <form onSubmit={UpdateWeather}>
-            <input placeholder="City..." className="input-bordered input" required onChange={handleWeatherCity} value={selectedCity} type="text" />
-            <button className="btn block mx-auto my-2" type="submit">Search City</button>
+        <div className="">
+            <form onSubmit={UpdateWeather} className=''>
+            <input placeholder="City..." className="input-bordered input mr-1" required onChange={handleWeatherCity} value={selectedCity} type="text" />
+            <button className="btn my-2 ml-1" type="submit">Search City</button>
             </form>
             <Weather city={cityWeather}/>
         </div>

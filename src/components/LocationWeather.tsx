@@ -34,7 +34,7 @@ function GetGeoWeather() {
 
 
     return (
-        <div>
+        <div className="">
             <Weather city={city}  />
         </div>
     )
