@@ -3,6 +3,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { loadImage } from "../loadImage";
 import { WeatherFetcher } from "../WeatherFetcher";
+import { Link } from "react-router-dom";
 
 interface WeatherProps {
   city: {
@@ -39,7 +40,7 @@ export function Weather(props: WeatherProps) {
             {props.city.wind} m/s
           </p>
           <div className="card-actions">
-            <button className="btn btn-ghost">Read More</button>
+            <Link to="/developers" className="btn btn-ghost">Read More</Link>
           </div>
         </div>
       </div>

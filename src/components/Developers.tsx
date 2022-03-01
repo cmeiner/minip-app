@@ -10,7 +10,7 @@ function Developers() {
       {developers.map((developer, index) => (
         <div
           key={index}
-          className="card w-96 bg-base-100 shadow-xl mx-auto bg-base-300 text-base-900"
+          className="card w-96 bg-base-100 shadow-xl mx-auto text-base-900"
         >
           <div className="card-body">
             <h2 className="card-title text-left">{developer.name}</h2>
