@@ -18,16 +18,16 @@ function Navbar() {
 
     return (
         <div className="mb-10 bg-neutral p-4">
-            <div className="navbar flex-col md:flex-row ">
+            <div className="navbar flex-col lg:flex-row ">
                 <div className="navbar-start">
-                    <h1 className="btn animate-pulse text-xl mx-auto md:mx-0">Weather app</h1>
+                    <NavLink to="/" className="btn animate-pulse text-xl mx-auto lg:mx-0">Weather app</NavLink>
                 </div>
                 <div className="navbar-center">
                     <NavLink to="/search" className="btn">Search Weather</NavLink>
                     <NavLink to="/" className="btn">{location} Weather</NavLink>
                 </div>
                 <div className="navbar-end text-white w-full md:w-1/2">
-                    <h1 className="btn text-center mx-auto md:mx-0">Developed by MiMeiner, FrontFelix & PRimate</h1>
+                    <NavLink to="/developers" className="btn text-center mx-auto lg:mx-0">Developed by MiMeiner, FrontFelix & PRimate</NavLink>
                 </div>
             </div>
         </div>
