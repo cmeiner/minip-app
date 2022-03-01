@@ -6,12 +6,12 @@ import { Weather } from "./Weather";
 function SetWeather() {
   const [selectedCity, setSelectedCity] = useState("");
   const [cityWeather, setCityWeather] = useState({
-    weather: "Sunny",
-    temperature: "20 C",
+    weather: ". . .",
+    temperature: ". . .",
     wind: 1,
-    name: "Gothenburg",
+    name: "Location...",
     url: "./assets/sunny/sunny1.jpg",
-    deg: 20,
+    deg: 0,
   });
   const [infoTemp, setTemp] = useState(true);
   const [selectedTemp, setSelectedTemp] = useState("");
