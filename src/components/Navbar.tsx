@@ -17,7 +17,7 @@ function Navbar() {
   }
 
   return (
-    <div className="mb-10 bg-neutral p-4">
+    <div className="mb-10 bg-neutral p-4 nav-main">
       <div className="navbar flex-col lg:flex-row ">
         <div className="navbar-start">
           <NavLink to="/" className="btn animate-pulse text-xl mx-auto lg:mx-0">
@@ -41,5 +41,4 @@ function Navbar() {
     </div>
   );
 }
-
 export default Navbar;

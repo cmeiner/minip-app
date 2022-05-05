@@ -10,13 +10,13 @@ function Developers() {
       {developers.map((developer, index) => (
         <div
           key={index}
-          className="card w-96 bg-base-100 shadow-xl mx-auto text-base-900"
+          className="card w-96 bg-neutral shadow-xl mx-auto text-base-900"
         >
           <div className="card-body">
             <h2 className="card-title text-left">{developer.name}</h2>
             <p className="text-left">{developer.role} Developer</p>
-            <div className="card-actions justify-end">
-              <a href={developer.Github} className="btn btn-primary">
+            <div className="card-actions justify-end pt-5">
+              <a href={developer.Github} className="btn btn-secondary">
                 GitHub
               </a>
             </div>

@@ -1,9 +1,9 @@
-import { loadImage } from "./loadImage";
 import { kelToCF } from "./KelvinToCelsius";
+import { loadImage } from "./loadImage";
 
 export async function WeatherFetcher(infoTemp: boolean, city: string) {
   let cityResponse = await fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=72ce280222d220a20b10856b83fcdee3`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=72ce280222d220a20b10856b83fcdee3`
   );
   let cityData = await cityResponse.json();
 

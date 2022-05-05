@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
 import ErrorBoundary from "./ErrorBoundary";
 import Developers from "./Developers";
 import LocationWeather from "./LocationWeather";
